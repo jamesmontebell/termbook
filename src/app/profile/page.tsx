@@ -28,7 +28,7 @@ export default async function ProfileDetails() {
 
   return (
     <div>
-      Profile Page {session.user.email} {journals}{" "}
+      Profile Page {session.user.email} {journals}
     </div>
   );
 }
