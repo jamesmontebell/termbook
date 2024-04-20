@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Link from "next/link";
-import { Particles } from "../app/components/Particles";
+import { Particles } from "../app/components/particles";
 import { ArrowRight } from "lucide-react";
 
 export default async function Home() {
