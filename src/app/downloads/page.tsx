@@ -8,10 +8,10 @@ import "aos/dist/aos.css";
 import "../globals.css";
 
 export default function Downloads() {
-  const { data: session } = useSession();
-  if (!session || !session.user) {
-    redirect("/api/auth/signin");
-  }
+  // const { data: session } = useSession();
+  // if (!session || !session.user) {
+  //   redirect("/api/auth/signin");
+  // }
 
   useEffect(() => {
     AOS.init({

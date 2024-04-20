@@ -2,8 +2,10 @@
 import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
-import PostCard from "../components/postCard"
-import "../globals.css"
+import PostCard from "../components/postCard";
+import "aos/dist/aos.css";
+import "../globals.css";
+import AOS from "aos";
 
 export default function ProfileDetails() {
   const { data: session } = useSession();
@@ -20,8 +22,8 @@ export default function ProfileDetails() {
   }, []);
 
   return (
-    <div>
-      Profile Page {session.user.email} {journals}
+    <div className="">
+      {/* Profile Page {session.user.email} {journals} */}
       <PostCard />
     </div>
   );
