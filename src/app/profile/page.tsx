@@ -5,30 +5,41 @@ import { useEffect, useState } from "react";
 import PostCard from "../components/postCard";
 import "aos/dist/aos.css";
 import "../globals.css";
-import React from "react"
-import { Particles } from "../components/particles";
-import AOS from "aos";
+import React from "react";
+
+type Journal = {
+  content: string;
+  userEmail: string;
+  time: string;
+};
 
 export default function ProfileDetails() {
   const { data: session } = useSession();
+  const [journals, setJournals] = useState<Journal[]>();
   if (!session || !session.user) {
     redirect("/api/auth/signin");
   }
 
-  const [journals, setJournals] = useState<string>();
-
   useEffect(() => {
-    fetch("/api/journals")
-      .then((res) => res.json())
-      .then((data) => setJournals(data.name));
+    fetchData();
   }, []);
+  async function fetchData() {
+    try {
+      const response = await fetch(
+        "http://localhost:3000/profile/api/journals"
+      );
+      const data = await response.json();
+      setJournals(data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  }
 
   return (
     <div className="">
-      {/* <Particles className="absolute inset-0 -z-10 h-full w-full" /> */}
+      {/* {entries ? entries[0].content : null} */}
 
-      {/* Profile Page {session.user.email} {journals} */}
-      <PostCard />
+      {journals && <PostCard journals={journals} />}
     </div>
   );
 }
