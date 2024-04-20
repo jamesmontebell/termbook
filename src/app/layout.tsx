@@ -1,5 +1,4 @@
 import { getServerSession } from "next-auth";
-import "./globals.css";
 import { Providers } from "../app/Providers";
 
 import SessionProvider from "./components/SessionProvider";
@@ -19,7 +18,7 @@ export default async function RootLayout({
   const session = await getServerSession();
   return (
     <html lang="en">
-      <body>
+      <body className="bg-[#121212] text-white">
         <SessionProvider session={session}>
           <Providers>
             <NewNavBar />
