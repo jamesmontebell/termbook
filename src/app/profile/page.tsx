@@ -9,22 +9,12 @@ export default function ProfileDetails() {
     redirect("/api/auth/signin");
   }
 
-  const [journals, setJournals] = useState();
+  const [journals, setJournals] = useState<string>();
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = fetch("route");
-        if (!(await response).ok) {
-          throw new Error("bruh");
-        }
-        const data = await (await response).json();
-        setJournals(data);
-      } catch (error) {}
-    };
-    fetchData();
-
-    return () => {};
+    fetch("/api/journals")
+      .then((res) => res.json())
+      .then((data) => setJournals(data.name));
   }, []);
 
   return (
