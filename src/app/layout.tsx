@@ -23,7 +23,7 @@ export default async function RootLayout({
           <Providers>
             <div className="flex flex-col">
               <NewNavBar />
-              <div className="flex justify-center items-center h-[600px]">
+              <div className="w-screen h-[600px]">
                 {children}
               </div>
               <Footer />
