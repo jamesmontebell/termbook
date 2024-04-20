@@ -18,7 +18,7 @@ export default async function Home() {
 
   return (
     <div className="relative w-[95%] flex justify-center items-center h-full  p-6 text-center gap-40">
-      <Particles className="absolute inset-0 -z-10 h-full" />
+      <Particles className="absolute inset-0 -z-10 h-full w-full" />
       <div className="text-left px-8">
         <h1
           className="pb-4 font-extrabold tracking-tight text-transparent text-5xl  bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-600 to-cyan-400"
