@@ -9,7 +9,7 @@ export async function GET() {
   }
   try {
     const response = await fetch(
-      "http://18.226.82.203:1234/entries/bpb9629@gmail.com"
+      "http://18.226.82.203:1234/entries/" + session.user.email
     );
     return response;
   } catch (error) {
