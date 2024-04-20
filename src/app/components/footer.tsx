@@ -1,5 +1,6 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Link from "next/link";
+import React from "react"
 
 export const Footer = () => {
   const links = [
@@ -9,7 +10,7 @@ export const Footer = () => {
     },
   ];
   return (
-    <div className="text-center p-6 w-full">
+    <div className="text-center w-full">
       <div className="flex items-center justify-center space-x-4">
         {links.map((link, index) => (
           <Link
