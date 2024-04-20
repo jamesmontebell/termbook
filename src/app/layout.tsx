@@ -1,5 +1,4 @@
 import { getServerSession } from "next-auth";
-import { Providers } from "./providers";
 
 import SessionProvider from "./components/SessionProvider";
 import { Footer } from "./components/footer";
@@ -20,15 +19,12 @@ export default async function RootLayout({
     <html lang="en" className="h-screen">
       <body className="bg-[#121212] text-white min-h-[100vh]">
         <SessionProvider session={session}>
-          <Providers>
-            <div className="flex flex-col">
-              <NewNavBar />
-              <div className="w-screen h-[600px]">
-                {children}
-              </div>
-              <Footer />
-            </div>
-          </Providers>
+
+          <div className="flex flex-col justify-center items-center ">
+            <NewNavBar />
+            <div className="h-[650px] w-screen">{children}</div>
+            <Footer />
+          </div>
         </SessionProvider>
       </body>
     </html>
