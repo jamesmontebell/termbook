@@ -22,8 +22,8 @@ export default async function RootLayout({
         <SessionProvider session={session}>
           <Providers>
             <div className="flex flex-col">
-              <NewNavBar />
               <div className="flex justify-center items-center h-[600px]">
+                <NewNavBar />
                 {children}
               </div>
               <Footer />
