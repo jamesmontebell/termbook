@@ -14,6 +14,6 @@ export async function GET() {
     return response;
   } catch (error) {
     console.error("Error fetching data:", error);
-    return null;
+    return new Response("Failed:(");
   }
 }
