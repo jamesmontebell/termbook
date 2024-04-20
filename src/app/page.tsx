@@ -24,13 +24,13 @@ export default async function Home() {
           className="pb-4 font-extrabold tracking-tight text-transparent text-5xl  bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-600 to-cyan-400"
           data-aos="fade-down"
         >
-          Welcome to
+          Journaling for
         </h1>
         <h1
           className="pb-4 font-extrabold tracking-tight text-transparent text-5xl  bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-600 to-cyan-400"
           data-aos="fade-down"
         >
-          Termbook
+          developers
         </h1>
         <p
           className="mb-8 text-lg text-white-300/40 font-medium"
