@@ -10,6 +10,8 @@ export const authOptions = {
   ],
 };
 
-export const handler = NextAuth(authOptions);
+// Export the handler function for GET requests
+export const GET = NextAuth(authOptions);
 
-export { handler as GET, handler as POST };
+// Export the handler function for POST requests
+export const POST = NextAuth(authOptions);
