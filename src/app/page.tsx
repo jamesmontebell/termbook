@@ -1,15 +1,10 @@
-import { getServerSession } from "next-auth";
+import { LandingPage } from "./components/landing";
+import '../app/globals.css';
 
-export default async function Home() {
-  const session = await getServerSession();
+export default function Home() {
   return (
-    <>
-      getServerSession Result
-      {session?.user?.name ? (
-        <div>{session?.user?.name}</div>
-      ) : (
-        <div>Not logged in</div>
-      )}
-    </>
+    <div>
+      <LandingPage />
+    </div>
   );
 }
