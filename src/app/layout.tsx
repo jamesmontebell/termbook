@@ -1,8 +1,8 @@
 import { getServerSession } from "next-auth";
-import { Providers } from "../app/Providers";
+import { Providers } from "../app/providers";
 
 import SessionProvider from "./components/SessionProvider";
-import { Footer } from "./components/Footer";
+import { Footer } from "./components/footer";
 import NewNavBar from "./components/NewNavBar";
 
 export const metadata = {
