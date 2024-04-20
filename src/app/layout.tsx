@@ -17,13 +17,17 @@ export default async function RootLayout({
 }) {
   const session = await getServerSession();
   return (
-    <html lang="en">
-      <body className="bg-[#121212] text-white">
+    <html lang="en" className="h-screen">
+      <body className="bg-[#121212] text-white min-h-[100vh]">
         <SessionProvider session={session}>
           <Providers>
-            <NewNavBar />
-            {children}
-            <Footer />
+            <div className="flex flex-col">
+              <NewNavBar />
+              <div className="flex justify-center items-center h-[600px]">
+                {children}
+              </div>
+              <Footer />
+            </div>
           </Providers>
         </SessionProvider>
       </body>
