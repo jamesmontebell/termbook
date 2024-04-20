@@ -18,12 +18,17 @@ export default async function ProfileDetails() {
           throw new Error("bruh");
         }
         const data = await (await response).json();
+        setJournals(data);
       } catch (error) {}
     };
     fetchData();
 
     return () => {};
-  }, [journals]);
+  }, []);
 
-  return <div>Profile Page {session.user.email} </div>;
+  return (
+    <div>
+      Profile Page {session.user.email} {journals}{" "}
+    </div>
+  );
 }
