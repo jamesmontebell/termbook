@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
 import { signIn, signOut, useSession } from "next-auth/react";
-import React from "react" 
+import React from "react";
+import { usePathname } from "next/navigation";
 
 function AuthButton() {
   const { data: session } = useSession();
@@ -14,7 +15,9 @@ function AuthButton() {
             <Link href="/profile">{session?.user?.name}</Link>
           </button>
           <Link href="/">
-            <button onClick={() => signOut()}>Sign Out</button>
+            <button className="text-white" onClick={() => signOut()}>
+              Sign Out
+            </button>
           </Link>
         </div>
       </>
@@ -28,6 +31,11 @@ function AuthButton() {
 }
 
 export default function NewNavBar() {
+  const pathname = usePathname();
+
+  const ACTIVE = "ml-auto underline text-white/80";
+  const UNACTIVE = "ml-auto text-white";
+
   return (
     <div className="px-10 py-6 w-full font-bold text-l">
       <ul className="flex justify-between items-center text-center">
@@ -36,12 +44,14 @@ export default function NewNavBar() {
         </Link>
         <div className="flex gap-10">
           <Link href="/downloads">
-            <li className="ml-auto">Downloads</li>
+            <li className={pathname === "/downloads" ? ACTIVE : UNACTIVE}>
+              Downloads
+            </li>
           </Link>
           <Link href="/docs">
-            <li className="ml-auto">Docs</li>
+            <li className={pathname === "/docs" ? ACTIVE : UNACTIVE}>Docs</li>
           </Link>
-          <li className="ml-auto">
+          <li className={pathname === "/profile" ? ACTIVE : UNACTIVE}>
             <AuthButton />
           </li>
         </div>
