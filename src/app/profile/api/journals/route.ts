@@ -11,9 +11,6 @@ export async function GET() {
     const response = await fetch(
       "http://18.226.82.203:1234/entries/bpb9629@gmail.com"
     );
-    console.log(response);
-    // const data = await response.json();
-    // console.log(data);
     return response;
   } catch (error) {
     console.error("Error fetching data:", error);
