@@ -5,23 +5,31 @@ import { useEffect, useState } from "react";
 import PostCard from "../components/postCard";
 import "aos/dist/aos.css";
 import "../globals.css";
-import React from "react"
+import React from "react";
 import { Particles } from "../components/particles";
 import AOS from "aos";
 
 export default function ProfileDetails() {
   const { data: session } = useSession();
+  const [entries, setEntries] = useState([]);
   if (!session || !session.user) {
     redirect("/api/auth/signin");
   }
 
-  const [journals, setJournals] = useState<string>();
-
   useEffect(() => {
-    fetch("/api/journals")
-      .then((res) => res.json())
-      .then((data) => setJournals(data.name));
+    fetchData();
   }, []);
+  async function fetchData() {
+    try {
+      const response = await fetch(
+        "http://localhost:3000/profile/api/journals"
+      );
+      const data = await response.json();
+      setEntries(data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  }
 
   return (
     <div className="">
