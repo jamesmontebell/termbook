@@ -1,9 +1,10 @@
-import { getServerSession } from "next-auth";
+"use client";
+import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export default async function ProfileDetails() {
-  const session = await getServerSession();
+export default function ProfileDetails() {
+  const { data: session } = useSession();
   if (!session || !session.user) {
     redirect("/api/auth/signin");
   }
