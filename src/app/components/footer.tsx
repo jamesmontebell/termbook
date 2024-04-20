@@ -9,7 +9,7 @@ export const Footer = () => {
     },
   ];
   return (
-    <div className="text-center pb-8">
+    <div className="text-center p-6">
       <div className="flex items-center justify-center space-x-4">
         {links.map((link, index) => (
           <Link
