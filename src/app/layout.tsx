@@ -19,6 +19,7 @@ export default async function RootLayout({
     <html lang="en" className="h-screen">
       <body className="bg-[#121212] text-white min-h-[100vh]">
         <SessionProvider session={session}>
+
           <div className="flex flex-col justify-center items-center ">
             <NewNavBar />
             <div className="h-[650px] w-screen">{children}</div>
