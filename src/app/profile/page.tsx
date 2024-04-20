@@ -6,12 +6,16 @@ import PostCard from "../components/postCard";
 import "aos/dist/aos.css";
 import "../globals.css";
 import React from "react";
-import { Particles } from "../components/particles";
-import AOS from "aos";
+
+type Journal = {
+  content: string;
+  userEmail: string;
+  time: string;
+};
 
 export default function ProfileDetails() {
   const { data: session } = useSession();
-  const [entries, setEntries] = useState([]);
+  const [journals, setJournals] = useState<Journal[]>();
   if (!session || !session.user) {
     redirect("/api/auth/signin");
   }
@@ -25,7 +29,7 @@ export default function ProfileDetails() {
         "http://localhost:3000/profile/api/journals"
       );
       const data = await response.json();
-      setEntries(data);
+      setJournals(data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -33,10 +37,9 @@ export default function ProfileDetails() {
 
   return (
     <div className="">
-      {/* <Particles className="absolute inset-0 -z-10 h-full w-full" /> */}
+      {/* {entries ? entries[0].content : null} */}
 
-      {/* Profile Page {session.user.email} {journals} */}
-      <PostCard />
+      {journals && <PostCard journals={journals} />}
     </div>
   );
 }
