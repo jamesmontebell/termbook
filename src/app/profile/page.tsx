@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import PostCard from "../components/postCard";
 import "aos/dist/aos.css";
 import "../globals.css";
+import React from "react"
+import { Particles } from "../components/particles";
 import AOS from "aos";
 
 export default function ProfileDetails() {
@@ -23,6 +25,8 @@ export default function ProfileDetails() {
 
   return (
     <div className="">
+      {/* <Particles className="absolute inset-0 -z-10 h-full w-full" /> */}
+
       {/* Profile Page {session.user.email} {journals} */}
       <PostCard />
     </div>
