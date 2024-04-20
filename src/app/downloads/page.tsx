@@ -4,6 +4,8 @@ import { redirect } from "next/navigation";
 import { Icon } from "@iconify/react";
 import { useEffect } from "react";
 import AOS from "aos";
+import "aos/dist/aos.css";
+import "../globals.css";
 
 export default function Downloads() {
   const { data: session } = useSession();
