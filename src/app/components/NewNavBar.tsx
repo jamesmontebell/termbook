@@ -8,7 +8,14 @@ function AuthButton() {
   if (session) {
     return (
       <>
-        <button onClick={() => signOut()}>Sign out</button>
+        <div className="flex gap-7">
+          <button>
+            <Link href="/profile">{session?.user?.name}</Link>
+          </button>
+          <Link href="/">
+            <button onClick={() => signOut()}>Sign Out</button>
+          </Link>
+        </div>
       </>
     );
   }

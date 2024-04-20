@@ -46,7 +46,7 @@ export default async function Home() {
         >
           <Link
             className="w-full justify-center flex items-center whitespace-nowrap transition duration-150 ease-in-out font-medium rounded px-4 py-1.5  text-zinc-900 bg-white hover:bg-white/80 group"
-            href="#calendly"
+            href="/docs"
           >
             Get Started{" "}
             <ArrowRight className="w-3 h-3 tracking-normal text-primary-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1" />
