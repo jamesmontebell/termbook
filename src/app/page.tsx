@@ -1,4 +1,6 @@
 "use client";
+import React from "react"
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -6,6 +8,8 @@ import Link from "next/link";
 import { Particles } from "../app/components/particles";
 import { ArrowRight } from "lucide-react";
 import { Icon } from "@iconify/react";
+import { Footer } from "./components/footer";
+
 
 export default async function Home() {
   useEffect(() => {
@@ -18,7 +22,7 @@ export default async function Home() {
 
   return (
     <div className="relative w-[95%] flex justify-center items-center h-full  p-6 text-center gap-40">
-      <Particles className="absolute inset-0 -z-10 h-full w-full" />
+      {/* <Particles className="absolute inset-0 -z-10 h-full w-full" /> */}
       <div className="text-left px-8">
         <h1
           className="pb-4 font-extrabold tracking-tight text-transparent text-5xl  bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-600 to-cyan-400"
@@ -54,7 +58,7 @@ export default async function Home() {
         </div>
       </div>
       <div
-        className="font-extrabold tracking-tight text-5xl  bg-clip-text "
+        className="font-extrabold tracking-tight text-5xl bg-clip-text "
         data-aos="fade-down"
       >
         <Icon className="w-80 h-80 " icon="bi:journal-text" />

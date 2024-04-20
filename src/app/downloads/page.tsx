@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../globals.css";
+import React from "react"
 
 export default function Downloads() {
   // const { data: session } = useSession();
