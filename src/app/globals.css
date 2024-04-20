@@ -1,4 +1,16 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-  
+@tailwind components;
+@tailwind utilities;
+
+.gradient-text {
+  background: linear-gradient(to right, 
+    #f72585, #3a0ca3, #4361ee, #4cc9f0,
+    #f72585, #3a0ca3, #4361ee, #4cc9f0,
+    #f72585, #3a0ca3, #4361ee, #4cc9f0,
+    #4361ee, #3a0ca3, #f72585);
+  background-size: 900% 300%; /* Adjusted to accommodate the extended gradient */
+  background-clip: text;
+  -webkit-background-clip: text; /* For Safari */
+  color: transparent; /* Make the text color transparent to show the gradient */
+  -webkit-text-fill-color: transparent; /* For Safari */
+}
