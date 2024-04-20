@@ -1,5 +1,5 @@
 import { getServerSession } from "next-auth";
-import { Providers } from "../app/providers";
+import { Providers } from "./providers";
 
 import SessionProvider from "./components/SessionProvider";
 import { Footer } from "./components/footer";
