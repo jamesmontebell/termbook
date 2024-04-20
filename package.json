@@ -17,6 +17,7 @@
     "@radix-ui/react-aspect-ratio": "^1.0.3",
     "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-separator": "^1.0.3",
+    "@radix-ui/react-slot": "^1.0.2",
     "@tabler/icons-react": "^3.1.0",
     "aos": "^2.3.4",
     "class-variance-authority": "^0.7.0",
