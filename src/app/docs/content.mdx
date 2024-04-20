@@ -1,0 +1,138 @@
+# **Installation** 
+
+### Installing **Termbook** is a very quick and easy process. We know these docs may appear long but that's just so you have all the info you need!
+
+Before you start, ensure **Termbook** is supported on your system.  
+
+**Termbook** supports the following architectures:
+
+- Windows x32 and x64
+- Linux x32 and x64
+- MacOS Intel and Apple Silicon  
+
+Once you've confirmed your system is supported, follow the quick and easy instructions below to get up and running with your personal journal in just a couple minutes.  
+
+## **Download**  
+1. Navigate to the download page **[here](http://localhost:3000/downloads)**
+2. On the download page, select the proper version for your system. 
+3. Download the binary executable.  
+
+## **Next Steps**  
+
+Once you've downloaded the executable navigate to where it was downloaded. 
+
+Once you've found where your **Termbook** was downloaded follow the below depending on your OS:
+
+**Windows:**
+- Open File Explorer and locate your Termbook executable.
+- Press ```Shift + Right-click``` on the file. This wil bring up an extended context menu.
+- Click on ```Copy as path``` in the context menu. This will copy the full path of the file, including the filename to your clipboard.
+
+**MacOS:**
+- Right click the file
+- Press and hold the ```option``` key on the bottom left of your keyboard.
+- Click ```Copy "Termbook.exe" as Pathname```
+- This will copy the full path for the file to your clipboard.
+- In your terminal window, type ```chmod u+x /path/to/Termbook.exe```. Make sure to replace ```/path/to/Termbook.exe``` with the actual path where you have downloaded and made 'Termbook.exe' executable
+  
+**Linux:**  
+
+On linux it will vary by distribution, please refer to the documentation if you prefer to copy the path in the same manner as Windows and MacOS. 
+
+Copying it via terminal is much more straightforward:
+- Open your terminal
+- Use the 'cd' command to navigate to the directory where the Termbook executable is located
+- Once you're in the correct directory, use the 'pwd' command to print the current working directory. This will display the full path of the directory in your terminal. You should see something like this:
+```bash 
+/home/user/downloads/
+```
+- Right-click copy the full path and right-click paste it back into your terminal, then append the name of your executable to the end of it. You should have something that looks similar to this:
+```bash
+/home/user/downloads/Termbook.exe
+```
+- Highlight this path, right-click, and copy it.
+- Now in your terminal window, type: 
+```bash
+chmod u+x
+```
+- Now paste your path to Termbook.exe to the end, it should look something like:
+```bash
+chmod u+x /home/user/downloads/Termbook.exe
+```
+- Make sure to fill in the path with your actual path where your 'Termbook.exe' executable is located.
+
+## Modifying your Terminal setup file  
+
+You may be familiar with the concept of a Terminal setup file already but if you're not you've probably seen the name of one somewhere. They have a file extension that looks like this:  
+```bash
+.zshrc, .bashrc, .bash_profile, profile.ps1, etc
+``` 
+
+Don't worry if you've never seen one, we'll make everything super easy to follow.  
+
+Here's all you have to do:  
+1. Open your Terminal setup file
+2. Find an open line and write 
+```bash
+./
+```
+1. Now you're going to right-click and paste that path of your Termbook executable you copied before. You should have something like this:
+```bash
+./path/to/your/Termbook.exe
+```
+
+Here's an example of what your file may look like;
+```bash
+# Some general settings
+PS1='[\u@\h \W]\$ '
+alias ll='ls -l'
+
+# Adding termbook to the PATH
+# Replace '/path/to/termbook' with the actual path where you have downloaded and made 'termbook' executable
+if [ -d "/path/to/termbook" ]; then
+    PATH="/path/to/termbook:$PATH"
+fiexport PATH
+```  
+
+Save and close this file.
+
+You can now close your terminal and reopen it.
+
+### **Adjust System Permissions** 
+
+**Great work!** You're almost ready to start journaling in your **Termbook!** Just a couple more quick steps to make it all work.
+
+#### For **Linux** users:
+No additional steps are needed, **Linux** users you can get to journaling, **congrats!**  
+
+#### For **Windows** users:  
+Just run the executable and you're good to go!  
+
+
+#### For **MacOS** users:  
+
+Open a terminal session and run:
+```bash
+sudo spctl --master-disable
+``` 
+
+When prompted enter your password. If you do not enter your password **Termbook** will not work!  
+
+Now open and go to 
+```bash
+system settings -> security settings
+``` 
+Select the option: 
+```bash
+allow apps from anywhere
+```
+
+**Congrats**, you're all set! You can now get to journaling in your new **Termbook!**
+
+To view your journal entries, login to **Termbook.com** and open your profile!
+
+Happy **journaling!**
+
+
+
+

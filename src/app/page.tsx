@@ -9,7 +9,7 @@ import { Particles } from "../app/components/particles";
 import { ArrowRight } from "lucide-react";
 import { Icon } from "@iconify/react";
 import { Footer } from "./components/footer";
-
+import './globals.css'
 
 export default async function Home() {
   useEffect(() => {
@@ -25,13 +25,13 @@ export default async function Home() {
       {/* <Particles className="absolute inset-0 -z-10 h-full w-full" /> */}
       <div className="text-left px-8">
         <h1
-          className="pb-4 font-extrabold tracking-tight text-transparent text-5xl  bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-600 to-cyan-400"
+          className="pb-4 font-extrabold tracking-tight gradient-text text-transparent text-5xl animate-gradient"
           data-aos="fade-down"
         >
           Journaling for
         </h1>
         <h1
-          className="pb-4 font-extrabold tracking-tight text-transparent text-5xl  bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-600 to-cyan-400"
+          className="pb-4 font-extrabold tracking-tight gradient-text text-transparent animate-gradient text-5xl"
           data-aos="fade-down"
         >
           developers
