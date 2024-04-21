@@ -35,7 +35,7 @@ const config: Config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "gradient": "gradient 25s linear infinite",  // Define the gradient animation
+        "gradient": "gradient 8s linear infinite",  // Define the gradient animation
       },
       borderWidth: {
         "1": "1px",
@@ -45,15 +45,25 @@ const config: Config = {
       typography: (theme: any) => ({
         DEFAULT: {
           css: {
-            'strong': {
+            'h1, h2, h3': {
               color: 'transparent', // Ensures the text itself is transparent
-              backgroundImage: 'linear-gradient(to right, #6dd3fe, #348AC7, #6dd3fe, #348AC7, #6dd3fe, #348AC7)', // Specifies the gradient
+              backgroundImage: 'linear-gradient(to right, #6dd3fe, #48b5f0, #348AC7, #2667d9, #348AC7, #48b5f0, #6dd3fe, #48b5f0, #348AC7, #2667d9, #348AC7, #48b5f0, #6dd3fe)',              
               backgroundClip: 'text', // Ensures the background is only applied to the text
               WebkitBackgroundClip: 'text', // Compatibility for WebKit browsers
               WebkitTextFillColor: 'transparent', // Specifically for WebKit browsers
               backgroundSize: '200% 100%', // Necessary for animation
               animation: theme('animation.gradient'), // Use the defined gradient animation
             },
+
+            'strong': {
+              color: 'transparent', // Ensures the text itself is transparent
+              backgroundImage: 'linear-gradient(to right, #6dd3fe, #48b5f0, #348AC7, #48b5f0, #6dd3fe)',              
+              backgroundClip: 'text', // Ensures the background is only applied to the text
+              WebkitBackgroundClip: 'text', // Compatibility for WebKit browsers
+              WebkitTextFillColor: 'transparent', // Specifically for WebKit browsers
+              backgroundSize: '200% 100%', // Necessary for animation
+              animation: theme('animation.gradient'), // Use the defined gradient animation
+            }
           },
         },
       }),
