@@ -17,10 +17,10 @@
 
 .gradient-text-2 {
   background: linear-gradient(to right, 
-    #f72585, #3a0ca3, #4361ee, #4cc9f0,
-    #f72585, #3a0ca3, #4361ee, #4cc9f0,
-    #f72585, #3a0ca3, #4361ee, #4cc9f0,
-    #4361ee, #40cffb, #f72585);
+    #6dd3fe, #48b5f0, #348AC7, 
+    #2667d9, #348AC7, #48b5f0,
+    #6dd3fe);              
+
   background-size: 900% 300%; /* Adjusted to accommodate the extended gradient */
   background-clip: text;
   -webkit-background-clip: text; /* For Safari */

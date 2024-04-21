@@ -1,6 +1,10 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "tailwindCSS.suggestions": "true",
   darkMode: "class",  // Correct setting for dark mode
   content: [
     './pages/**/*.{ts,tsx}',
@@ -27,15 +31,15 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "gradient": {  // Define the gradient animation keyframes
+        "gradient": {
           "0%": { backgroundPosition: "0% 50%" },
-          "100%": { backgroundPosition: "100% 50%" }
+          "100%": { backgroundPosition: "200% 50%" } // Extended to 200% to ensure smoother loop
         }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "gradient": "gradient 8s linear infinite",  // Define the gradient animation
+        "gradient": "gradient 45s linear infinite", // Increased time and ensured linear motion
       },
       borderWidth: {
         "1": "1px",
@@ -45,24 +49,14 @@ const config: Config = {
       typography: (theme: any) => ({
         DEFAULT: {
           css: {
-            'h1, h2, h3': {
-              color: 'transparent', // Ensures the text itself is transparent
-              backgroundImage: 'linear-gradient(to right, #6dd3fe, #48b5f0, #348AC7, #2667d9, #348AC7, #48b5f0, #6dd3fe, #48b5f0, #348AC7, #2667d9, #348AC7, #48b5f0, #6dd3fe)',              
-              backgroundClip: 'text', // Ensures the background is only applied to the text
-              WebkitBackgroundClip: 'text', // Compatibility for WebKit browsers
-              WebkitTextFillColor: 'transparent', // Specifically for WebKit browsers
-              backgroundSize: '200% 100%', // Necessary for animation
-              animation: theme('animation.gradient'), // Use the defined gradient animation
-            },
-
-            'strong': {
-              color: 'transparent', // Ensures the text itself is transparent
-              backgroundImage: 'linear-gradient(to right, #6dd3fe, #48b5f0, #348AC7, #48b5f0, #6dd3fe)',              
-              backgroundClip: 'text', // Ensures the background is only applied to the text
-              WebkitBackgroundClip: 'text', // Compatibility for WebKit browsers
-              WebkitTextFillColor: 'transparent', // Specifically for WebKit browsers
-              backgroundSize: '200% 100%', // Necessary for animation
-              animation: theme('animation.gradient'), // Use the defined gradient animation
+            'h1, h2, h3, strong': {
+              color: 'transparent',
+              backgroundImage: 'linear-gradient(to right, #6dd3fe, #48b5f0, #348AC7, #2667d9, #348AC7, #48b5f0, #6dd3fe)',              
+              backgroundClip: 'text',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundSize: '300% 300%', // Increase size to ensure smooth transitions
+              animation: theme('animation.gradient'),
             }
           },
         },
@@ -70,8 +64,7 @@ const config: Config = {
     },
   },
   plugins: [
-    require("@tailwindcss/typography"),  // Ensuring the typography plugin is loaded
-    require("tailwindcss-animate"),  // Assuming this plugin exists and is correctly configured to handle animations
+    require("@tailwindcss/typography"),
   ],
 };
 
