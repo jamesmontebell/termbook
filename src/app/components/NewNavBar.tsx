@@ -4,7 +4,6 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import React from "react";
 import { usePathname } from "next/navigation";
 import "../globals.css";
-
 function AuthButton() {
   const { data: session } = useSession();
 
