@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../globals.css";
-import React from "react"
+import React from "react";
 
 export default function Downloads() {
   // const { data: session } = useSession();
@@ -49,36 +49,54 @@ export default function Downloads() {
       </div>
       <div className="flex gap-[160px] " data-aos="fade-down">
         <div className="flex flex-col gap-4 w-full justify-evenly">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">
+          <a
+            href="https://termbook.s3.amazonaws.com/termbook_windows32.exe"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md flex justify-center items-center text-center"
+          >
             Download
             <br />
             x32
-          </button>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">
+          </a>
+          <a
+            href="https://termbook.s3.amazonaws.com/termbook_window64.exe"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md flex justify-center items-center text-center"
+          >
             Download
             <br />
             x64
-          </button>
+          </a>
         </div>
         <div className="flex flex-col gap-4 w-full justify-around p-1">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">
+          <a
+            href="https://termbook.s3.amazonaws.com/termbook_linux32"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md flex justify-center items-center text-center"
+          >
             Download
             <br />
             x32
-          </button>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">
+          </a>
+          <a
+            href="https://termbook.s3.amazonaws.com/termbook_linux64"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md flex justify-center items-center text-center"
+          >
             Download
             <br />
             x64
-          </button>
+          </a>
         </div>
         <div className="flex flex-col gap-4 w-full justify-around">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">
-            Download Intel chip
-          </button>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">
-            Download Apple silicon
-          </button>
+          <a
+            href="https://termbook.s3.amazonaws.com/termbook_appleintel"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md flex justify-center items-center text-center"
+          >
+            Download Intel Chip
+          </a>
+          <a
+            href="https://termbook.s3.amazonaws.com/termbook_applesilicon"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md flex justify-center items-center text-center"
+          >
+            Download Apple Silicon
+          </a>
         </div>
       </div>
     </div>
