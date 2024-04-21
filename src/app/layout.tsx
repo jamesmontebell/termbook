@@ -19,12 +19,12 @@ export default async function RootLayout({
   const session = await getServerSession();
   return (
     <html lang="en" className="h-screen">
-      <body className="bg-[#121212] text-white min-h-[100vh]">
-      <Particles className="absolute inset-0 -z-10 h-full w-full" />
+      <body className="bg-[#121212] text-white min-h-[100vh] flex flex-col">
+        <Particles className="absolute inset-0 -z-10 h-full w-full" />
         <SessionProvider session={session}>
           <div className="flex flex-col justify-center items-center ">
             <NewNavBar />
-            <div className="h-[800px] w-screen">{children}</div>
+            <div className="h-[600px] w-screen">{children}</div>
             <Footer />
           </div>
         </SessionProvider>
