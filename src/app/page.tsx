@@ -1,6 +1,6 @@
 "use client";
 import React from "react"
-
+import { TracerScroll } from "./components/tracer/tracerScroll";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -11,7 +11,7 @@ import { Icon } from "@iconify/react";
 import { Footer } from "./components/footer";
 import './globals.css'
 
-export default async function Home() {
+export default function Home() {
   useEffect(() => {
     AOS.init({
       disable: "phone",
@@ -21,7 +21,9 @@ export default async function Home() {
   }, []);
 
   return (
-    <div className="relative w-[95%] flex justify-center items-center h-full  p-6 text-center gap-40">
+
+    <div>
+    <div className="min-h-[700px] relative w-[95%] flex justify-center items-center h-full pb-6 mb-20 pt-2 text-center gap-40">
       {/* <Particles className="absolute inset-0 -z-10 h-full w-full" /> */}
       <div className="text-left px-8">
         <h1
@@ -57,12 +59,18 @@ export default async function Home() {
           </Link>
         </div>
       </div>
+
       <div
         className="font-extrabold tracking-tight text-5xl bg-clip-text "
         data-aos="fade-down"
       >
-        <Icon className="w-80 h-80 " icon="bi:journal-text" />
+        <Icon className="w-80 h-80" icon="bi:journal-text" />
       </div>
+    </div>
+    <div className="pb-5 w-[90%] scroll-wrapper mt-10 mb-10 mx-auto relative">
+    <Particles className="absolute inset-0 -z-10 h-full w-full" />
+    <TracerScroll />
+</div>
     </div>
   );
 }

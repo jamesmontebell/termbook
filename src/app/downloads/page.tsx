@@ -23,7 +23,8 @@ export default function Downloads() {
   }, []);
 
   return (
-    <div className="flex justify-center items-center h-full flex-col gap-6">
+    <div className="flex min-h-[75vh] mb-10 max-h-screen justify-center items-center h-full flex-col gap-6">
+
       <div className="text-5xl" data-aos="fade-down" data-aos-delay="200">
         Download Termbook
       </div>
