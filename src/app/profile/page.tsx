@@ -25,9 +25,7 @@ export default function ProfileDetails() {
   }, []);
   async function fetchData() {
     try {
-      const response = await fetch(
-        "http://localhost:3000/profile/api/journals"
-      );
+      const response = await fetch("/api/journals");
       const data = await response.json();
       setJournals(data);
     } catch (error) {
