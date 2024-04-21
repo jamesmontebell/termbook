@@ -44,6 +44,7 @@ export default function NewNavBar() {
         </Link>
         <div className="flex gap-10">
           <Link href="/downloads">
+
             <li className={pathname === "/downloads" ? ACTIVE : UNACTIVE}>
               Downloads
             </li>

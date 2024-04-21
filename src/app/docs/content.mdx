@@ -25,15 +25,30 @@ Once you've found where your **Termbook** was downloaded follow the below depend
 
 **Windows:**
 - Open File Explorer and locate your Termbook executable.
-- Press ```Shift + Right-click``` on the file. This wil bring up an extended context menu.
-- Click on ```Copy as path``` in the context menu. This will copy the full path of the file, including the filename to your clipboard.
+- On the file, click: 
+```bash
+Shift + Right-click
+``` 
+- This wil bring up an extended context menu.
+- In the context menu, click:
+```bash
+Copy as path
+```
+- This will copy the full path of the file, including the filename to your clipboard.
 
 **MacOS:**
 - Right click the file
-- Press and hold the ```option``` key on the bottom left of your keyboard.
-- Click ```Copy "Termbook.exe" as Pathname```
+- Press and hold the 'option' key on the bottom left of your keyboard.
+- Click: 
+```bash
+Copy "Termbook-YourSystem.exe" as Pathname
+```
 - This will copy the full path for the file to your clipboard.
-- In your terminal window, type ```chmod u+x /path/to/Termbook.exe```. Make sure to replace ```/path/to/Termbook.exe``` with the actual path where you have downloaded and made 'Termbook.exe' executable
+- In your terminal window, type:
+```bash
+chmod u+x /path/to/Termbook-YourSystem.exe
+```
+- Make sure to replace the path with the actual path where you have downloaded and made 'Termbook-YourSystem.exe' executable
   
 **Linux:**  
 
@@ -48,7 +63,7 @@ Copying it via terminal is much more straightforward:
 ```
 - Right-click copy the full path and right-click paste it back into your terminal, then append the name of your executable to the end of it. You should have something that looks similar to this:
 ```bash
-/home/user/downloads/Termbook.exe
+/home/user/downloads/Termbook-LinuxVersion.exe
 ```
 - Highlight this path, right-click, and copy it.
 - Now in your terminal window, type: 
@@ -78,38 +93,39 @@ Here's all you have to do:
 ```
 1. Now you're going to right-click and paste that path of your Termbook executable you copied before. You should have something like this:
 ```bash
-./path/to/your/Termbook.exe
+./path/to/your/Termbook-YourSystem.exe
 ```
 
 Here's an example of what your file may look like;
 ```bash
-# Some general settings
+# Some general settings that already exist
 PS1='[\u@\h \W]\$ '
 alias ll='ls -l'
 
-# Adding termbook to the PATH
-# Replace '/path/to/termbook' with the actual path where you have downloaded and made 'termbook' executable
-if [ -d "/path/to/termbook" ]; then
-    PATH="/path/to/termbook:$PATH"
-fiexport PATH
+# Adding your termbook
+# Replace '/path/to/termbook' with 
+# the actual path of your Termbook executable
+./path/to/your/termbook_yoursystemhere
+export PATH
 ```  
 
 Save and close this file.
-
+ 
 You can now close your terminal and reopen it.
 
 ### **Adjust System Permissions** 
 
 **Great work!** You're almost ready to start journaling in your **Termbook!** Just a couple more quick steps to make it all work.
 
-#### For **Linux** users:
+### For **Linux** users:
 No additional steps are needed, **Linux** users you can get to journaling, **congrats!**  
 
-#### For **Windows** users:  
-Just run the executable and you're good to go!  
+### For **Windows** users:  
+Run the executable, a pop up will appear stating "The publisher could not be verified. Are you sure you want to run this software?", to this click "Run". You'll also want to uncheck the box that says "Always ask before opening this file".
 
+![Windows Setup](/windows.png)  
 
-#### For **MacOS** users:  
+### For **MacOS** users:  
 
 Open a terminal session and run:
 ```bash
@@ -127,12 +143,11 @@ Select the option:
 allow apps from anywhere
 ```
 
+![MacOS Setup](/mac.png)
+
+
 **Congrats**, you're all set! You can now get to journaling in your new **Termbook!**
 
 To view your journal entries, login to **Termbook.com** and open your profile!
 
-Happy **journaling!**
-
-
-
-
+Happy **Journaling!**
