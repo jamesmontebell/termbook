@@ -3,15 +3,13 @@ import "../../globals.css";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { twMerge } from "tailwind-merge";
 import { TracingBeam } from "../ui/tracing-beam";
 import { Particles } from "../particles";
 
 export function TracerScroll() {
   return (
-    <TracingBeam className="-px-6">
-      <Particles />
-      <div className="max-w-2xl mx-auto antialiased pt-4 relative">
+    <TracingBeam className="">
+      <div className="antialiased pt-4 relative">
         {dummyContent.map((item, index) => (
           <div key={`content-${index}`} className="mb-10">
             <h2
@@ -88,7 +86,8 @@ from-cyan-300 via-fuchsia-300 to-fuchsia-400 font-semibold"
           >
             personal reflection
           </span>{" "}
-          and there's no other better way for developers to Journal than Termbook.
+          and there's no other better way for developers to Journal than
+          Termbook.
         </p>
         <p></p>
         <p className="font-semibold">
@@ -118,17 +117,23 @@ from-cyan-300 via-fuchsia-300 to-fuchsia-400 font-semibold"
 from-cyan-300 via-fuchsia-300 to-fuchsia-400 font-semibold"
           >
             keeps you accountable
-          </span>{""}.  We know how hard it is to keep submitting to a Journal every day, but we also know how important it is to your personal growth and mental health. That's why we made sure you couldn't just Ctrl + C your way out of this one.
+          </span>
+          {""}. We know how hard it is to keep submitting to a Journal every
+          day, but we also know how important it is to your personal growth and
+          mental health. That's why we made sure you couldn't just Ctrl + C your
+          way out of this one.
         </p>
         <p></p>
         <p className="font-semibold">
           A study published in the Journal of clinical Psychology showed
           participants who engaged in expressive writing experienced a
-          significant decrease in depressive symptoms, with scores dropping by an
-          average of 17% over the course of the study. The University of
-          Rochester Medical Center study reported a 40% reduction in self-reported
-          stress levels among participants who journaled regularly for at least 10
-          minutes a day over the course of two weeks. This is why we built Termbook how we did, everyone owes themselves these things.
+          significant decrease in depressive symptoms, with scores dropping by
+          an average of 17% over the course of the study. The University of
+          Rochester Medical Center study reported a 40% reduction in
+          self-reported stress levels among participants who journaled regularly
+          for at least 10 minutes a day over the course of two weeks. This is
+          why we built Termbook how we did, everyone owes themselves these
+          things.
         </p>
       </div>
     ),

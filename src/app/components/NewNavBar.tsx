@@ -34,9 +34,6 @@ function AuthButton() {
 export default function NewNavBar() {
   const pathname = usePathname();
 
-  const ACTIVE = "ml-auto underline text-fuchsia-400/80";
-  const UNACTIVE = "ml-auto text-white";
-
   return (
     <div className="px-10 py-6 w-full font-bold text-l">
       <ul className="flex justify-between items-center text-center">
@@ -46,22 +43,46 @@ export default function NewNavBar() {
           </li>
         </Link>
         <div className="flex gap-10">
-        <Link href="/about">
-            <li className="hover:shadow-md hover:border-b-1 hover:border-fuchsia-500">
+          <Link href="/about">
+            <li
+              className={
+                pathname === "/about"
+                  ? "shadow-md underline decoration-fuchsia-500 underline-offset-4"
+                  : "hover:shadow-md hover:underline hover:decoration-fuchsia-500 hover:underline-offset-4"
+              }
+            >
               About
             </li>
           </Link>
           <Link href="/downloads">
-            <li className="hover:shadow-md hover:border-b-1 hover:border-fuchsia-500">
+            <li
+              className={
+                pathname === "/downloads"
+                  ? "shadow-md underline decoration-fuchsia-500 underline-offset-4"
+                  : "hover:shadow-md hover:underline hover:decoration-fuchsia-500 hover:underline-offset-4"
+              }
+            >
               Downloads
             </li>
           </Link>
           <Link href="/docs">
-            <li className="hover:shadow-md hover:border-b-1 hover:border-fuchsia-500">
+            <li
+              className={
+                pathname === "/docs"
+                  ? "shadow-md underline decoration-fuchsia-500 underline-offset-4"
+                  : "hover:shadow-md hover:underline hover:decoration-fuchsia-500 hover:underline-offset-4"
+              }
+            >
               Docs
             </li>
           </Link>
-          <li className="hover:shadow-md hover:border-b-1 hover:border-fuchsia-500">
+          <li
+            className={
+              pathname === "/profile"
+                ? "shadow-md underline decoration-fuchsia-500 underline-offset-4"
+                : "hover:shadow-md hover:underline hover:decoration-fuchsia-500 hover:underline-offset-4"
+            }
+          >
             <AuthButton />
           </li>
         </div>
