@@ -8,6 +8,8 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import { Particles } from "../components/particles";
+
 export default function Page() {
   const components = useMDXComponents({});
   useEffect(() => {
@@ -19,6 +21,7 @@ export default function Page() {
   }, []);
 
   return (
+    <div>
     <div className="flex flex-col min-h-screen pb-10 pt-10 z-30 relative">
       <div
         className="bg-gradient-to-r from-gray-900 via-gray-950 to-black border border-cyan-700 flex shadow-lg shadow-cyan-600 mx-20 my-0.7 justify-left opacity-98 flex-grow
@@ -34,6 +37,7 @@ export default function Page() {
           <MDXContent components={components} />
         </article>
       </div>
+    </div>
     </div>
   );
 }

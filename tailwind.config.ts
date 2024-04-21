@@ -1,5 +1,11 @@
 import type { Config } from "tailwindcss";
 
+const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPallete,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
 const config: Config = {
   "editor.quickSuggestions": {
     "strings": "on"
@@ -65,7 +71,19 @@ const config: Config = {
   },
   plugins: [
     require("@tailwindcss/typography"),
+    addVariablesForColors,
   ],
 };
 
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPallete(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+  addBase({
+    ":root": newVars,
+  });
+}
+
 export default config;
+

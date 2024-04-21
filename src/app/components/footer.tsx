@@ -10,8 +10,8 @@ export const Footer = () => {
     },
   ];
   return (
-    <div className="text-center w-full">
-      <div className="flex items-center justify-center space-x-4">
+    <div className="text-center pb-5 w-full">
+      <div className="flex row-span-2 items-center justify-center space-x-4">
         {links.map((link, index) => (
           <Link
             href={link.href}

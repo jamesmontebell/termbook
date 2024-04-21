@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .gradient-text {
   background: linear-gradient(to right, 
     #f72585, #3a0ca3, #4361ee, #4cc9f0,
@@ -26,4 +30,39 @@
   -webkit-background-clip: text; /* For Safari */
   color: transparent; /* Make the text color transparent to show the gradient */
   -webkit-text-fill-color: transparent; /* For Safari */
+}
+
+html, body {
+  height: 100%; /* Ensures the full height of the page is considered */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Aligns content in a vertical direction */
+}
+
+#__next { /* Next.js root element */
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Ensures flex children (content and footer) are vertical */
+  min-height: 100%;
+}
+
+.footer {
+  margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+  width: 10px; /* width of the vertical scrollbar */
+}
+
+.scroll-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1; /* color of the track (part the scrollbar can move within) */
+}
+
+.scroll-wrapper::-webkit-scrollbar-thumb {
+  background: #888; /* color of the scrollbar itself */
+}
+
+.scroll-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #555; /* color of the scrollbar when hovered over */
 }
