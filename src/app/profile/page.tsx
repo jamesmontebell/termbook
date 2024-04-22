@@ -48,7 +48,7 @@ export default function ProfileDetails() {
         data-aos-delay="200"
       >
         {journals &&
-          dummy.map((journal, journalIndex) => (
+          journals.map((journal, journalIndex) => (
             <PostCard journal={journal} key={journalIndex} />
           ))}
       </div>
