@@ -17,7 +17,7 @@ export default function ProfileDetails() {
   const { data: session } = useSession();
   const [journals, setJournals] = useState<Journal[]>();
   if (!session || !session.user) {
-    redirect("/api/auth/signin");
+    redirect("/");
   }
 
   useEffect(() => {
@@ -34,10 +34,17 @@ export default function ProfileDetails() {
   }
 
   return (
-    <div className="">
-      {/* {entries ? entries[0].content : null} */}
-
-      {journals && <PostCard journals={journals} />}
+    <div className="p-10">
+      <div
+        className="grid grid-cols-5 gap-6 place-items-start h-[800px] overflow-y-scroll"
+        data-aos="fade-down"
+        data-aos-delay="200"
+      >
+        {journals &&
+          journals.map((journal, journalIndex) => (
+            <PostCard journal={journal} key={journalIndex} />
+          ))}
+      </div>
     </div>
   );
 }
