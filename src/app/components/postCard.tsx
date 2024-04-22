@@ -62,11 +62,11 @@ export default function PostCard({ journal }: JournalEntryProps) {
           <DialogTrigger asChild>
             <Button>Show More</Button>
           </DialogTrigger>
-          <DialogContent className="bg-gradient-to-r from-gray-900 via-gray-950 to-black border border-cyan-800 rounded-xl p-4">
+          <DialogContent className="bg-zinc-950 border border-zinc-700 rounded-xl p-4">
             <DialogDescription className="text-slate-200 tracking-wider leading-loose">
               {journal.content}
             </DialogDescription>
-            <DialogClose className="text-cyan-700 font-medium">
+            <DialogClose className="text-blue-200 font-medium">
               Close
             </DialogClose>
           </DialogContent>
