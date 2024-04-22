@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { TracerScroll } from "./components/tracer/tracerScroll";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -8,7 +7,6 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Icon } from "@iconify/react";
 import "./globals.css";
-import Image from "next/image";
 import Scroll from "./components/scroll";
 
 export default function Home() {
@@ -21,9 +19,9 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <div className="min-h-[700px] relative w-[95%] flex justify-center items-center h-full pb-6 mb-20 pt-2 text-center gap-40">
-        <div className="text-left px-8">
+    <div className="flex flex-col justify-center items-center">
+      <div className="min-h-[700px] w-[95%] flex justify-center items-center h-full mb-10 text-center gap-40 p-6">
+        <div className="text-left">
           <h1
             className="pb-4 font-extrabold tracking-tight gradient-text text-transparent text-5xl animate-gradient"
             data-aos="fade-down"
@@ -64,6 +62,9 @@ export default function Home() {
         >
           <Icon className="w-80 h-80" icon="bi:journal-text" />
         </div>
+      </div>
+      <div className="animate-bounce">
+        <Icon className="w-10 h-10" icon="mdi:arrow-down" />
       </div>
       <div className="pb-5 w-[90%] scroll-wrapper mt-10 mb-10 mx-auto relative">
         <Scroll />

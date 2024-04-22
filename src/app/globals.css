@@ -1,30 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import '~highlight.js/styles/monokai.css'; /* Adjust to your chosen theme */
+@import "~highlight.js/styles/monokai.css"; /* Adjust to your chosen theme */
 
 html {
   scroll-behavior: smooth;
 }
 
 .gradient-text {
-  background: linear-gradient(to right, 
-    #f72585, #3a0ca3, #4361ee, #4cc9f0,
-    #f72585, #3a0ca3, #4361ee, #4cc9f0,
-    #f72585, #3a0ca3, #4361ee, #4cc9f0,
-    #4361ee, #3a0ca3, #f72585);
-  background-size: 900% 300%; /* Adjusted to accommodate the extended gradient */
+  background: linear-gradient(
+    to right,
+    #2b6cb0,
+    #4299e1,
+    #63b3ed,
+    #90cdf4,
+    #2b6cb0,
+    #4299e1,
+    #63b3ed,
+    #90cdf4,
+    #2b6cb0,
+    #4299e1,
+    #63b3ed,
+    #90cdf4,
+    #63b3ed,
+    #4299e1,
+    #2b6cb0
+  );
+  background-size: 900% 300%;
   background-clip: text;
-  -webkit-background-clip: text; /* For Safari */
-  color: transparent; /* Make the text color transparent to show the gradient */
-  -webkit-text-fill-color: transparent; /* For Safari */
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .gradient-text-2 {
-  background: linear-gradient(to right, 
-    #6dd3fe, #48b5f0, #348AC7, 
-    #2667d9, #348AC7, #48b5f0,
-    #6dd3fe);              
+  background: linear-gradient(
+    to right,
+    #6dd3fe,
+    #48b5f0,
+    #348ac7,
+    #2667d9,
+    #348ac7,
+    #48b5f0,
+    #6dd3fe
+  );
 
   background-size: 900% 300%; /* Adjusted to accommodate the extended gradient */
   background-clip: text;
@@ -33,7 +52,8 @@ html {
   -webkit-text-fill-color: transparent; /* For Safari */
 }
 
-html, body {
+html,
+body {
   height: 100%; /* Ensures the full height of the page is considered */
   margin: 0;
   padding: 0;
@@ -41,7 +61,8 @@ html, body {
   flex-direction: column; /* Aligns content in a vertical direction */
 }
 
-#__next { /* Next.js root element */
+#__next {
+  /* Next.js root element */
   flex: 1;
   display: flex;
   flex-direction: column; /* Ensures flex children (content and footer) are vertical */
