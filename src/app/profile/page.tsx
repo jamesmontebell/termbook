@@ -34,9 +34,9 @@ export default function ProfileDetails() {
   }
 
   return (
-    <div className="p-10">
+    <div className="p-5">
       <div
-        className="grid grid-cols-5 gap-6 place-items-start h-[800px] overflow-y-scroll"
+        className="p-5 grid grid-cols-5 gap-6 place-items-start h-[800px] overflow-y-scroll"
         data-aos="fade-down"
         data-aos-delay="200"
       >
