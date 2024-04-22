@@ -20,6 +20,13 @@ export default function ProfileDetails() {
     redirect("/");
   }
 
+  const dummy = Array(10).fill({
+    content:
+      "Today is the day after winning 1st place Best Bit Camp Hack! Still kinda of in shock. This is a really big accomplishment and I'm super excited. I'll be working a little today doing some monotonous stuff, and maybe some work on Termbook? We shall see. I'm excited to create a Linkedin post about hte dub as well.",
+    userEmail: "bruh",
+    time: "2024-04-21",
+  });
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -41,7 +48,7 @@ export default function ProfileDetails() {
         data-aos-delay="200"
       >
         {journals &&
-          journals.map((journal, journalIndex) => (
+          dummy.map((journal, journalIndex) => (
             <PostCard journal={journal} key={journalIndex} />
           ))}
       </div>

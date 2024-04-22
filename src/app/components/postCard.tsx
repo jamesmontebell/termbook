@@ -48,7 +48,7 @@ export default function PostCard({ journal }: JournalEntryProps) {
   }, []);
 
   return (
-    <Card className="bg-zinc-950 sm:w-[300px] border border-zinc-700 rounded-2xl shadow-md shadow-blue-400/30 flex flex-col hover:shadow-lg hover:shadow-blue-500/30 transition duration-500 ease-in-out transform hover:scale-105 hover:z-50">
+    <Card className="bg-zinc-950 sm:w-[300px] border border-zinc-700 rounded-2xl shadow-m flex flex-col hover:shadow-lg hover:shadow-blue-500/30 transition duration-500 ease-in-out transform hover:scale-105 hover:z-50">
       <CardHeader className="">
         <CardTitle className="text-white">
           {journal.time.split("T")[0]}
