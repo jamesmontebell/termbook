@@ -18,12 +18,12 @@ export default function Scroll() {
   }, []);
   return (
     <div className="flex flex-col gap-4 px-40 h-full text-xl">
-      <div className="flex gap-10 flex-col">
-        <div
-          className="flex flex-col justify-center items-center"
-          data-aos="fade-down"
-          data-aos-delay="200"
-        >
+      <div
+        className="flex gap-10 flex-col"
+        data-aos="fade-down"
+        data-aos-delay="200"
+      >
+        <div className="flex flex-col justify-center items-center">
           <div
             className="border border-white font-bold bg-gradient-to-l from-fuchsia-700 via-cyan-500 to-cyan-500 text-white rounded-md text-3xl w-fit px-4 py-2 mb-3"
             style={{
@@ -61,11 +61,7 @@ export default function Scroll() {
             journey.
           </div>
         </div>
-        <div
-          className="flex flex-col justify-center items-center"
-          data-aos="fade-down"
-          data-aos-delay="200"
-        >
+        <div className="flex flex-col justify-center items-center">
           <div
             className="border border-white font-bold bg-gradient-to-l from-fuchsia-700 via-cyan-500 to-cyan-500 text-white rounded-md text-3xl w-fit px-4 py-2 mb-3"
             style={{
@@ -108,11 +104,7 @@ export default function Scroll() {
             personal growth every day.
           </div>
         </div>
-        <div
-          className="flex flex-col justify-center items-center"
-          data-aos="fade-down"
-          data-aos-delay="200"
-        >
+        <div className="flex flex-col justify-center items-center">
           <div
             className="border border-white font-bold bg-gradient-to-l from-fuchsia-700 via-cyan-500 to-cyan-500 text-white rounded-md text-3xl w-fit px-4 py-2 mb-3"
             style={{
