@@ -20,14 +20,9 @@ function AuthButton() {
           <button className={pathname === "/profile" ? ACTIVE : UNACTIVE}>
             <Link href="/profile">{session?.user?.name}</Link>
           </button>
-          <Link href="/">
-            <button
-              className={pathname != "/" ? ACTIVE : UNACTIVE}
-              onClick={() => signOut()}
-            >
-              Sign Out
-            </button>
-          </Link>
+          <button className={UNACTIVE} onClick={() => signOut()}>
+            Sign out
+          </button>
         </div>
       </>
     );
@@ -73,7 +68,7 @@ export default function NewNavBar() {
           <Link href="/docs">
             <li className={pathname === "/docs" ? ACTIVE : UNACTIVE}>Docs</li>
           </Link>
-          <li className={pathname === "/profile" ? ACTIVE : UNACTIVE}>
+          <li>
             <AuthButton />
           </li>
         </div>
