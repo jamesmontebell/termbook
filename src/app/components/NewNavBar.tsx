@@ -43,7 +43,7 @@ export default function NewNavBar() {
   const pathname = usePathname();
 
   return (
-    <div className="px-10 py-6 w-full font-bold text-l">
+    <div className="px-10 py-6 w-full font-bold text-l h-[75px]">
       <ul className="flex justify-between items-center text-center">
         <Link href="/">
           <li
