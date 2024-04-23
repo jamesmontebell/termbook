@@ -68,7 +68,7 @@ export default function Home() {
           <Icon className="w-10 h-10" icon="mdi:arrow-down" />
         </div>
       </div>
-      <div className="pb-5 w-[90%] scroll-wrapper mt-10 mb-10 mx-auto relative">
+      <div className="pb-5 w-[90%] pt-28">
         <Scroll />
       </div>
     </div>
