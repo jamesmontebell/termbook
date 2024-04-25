@@ -1,4 +1,4 @@
-# TermBook
+# Termbook
 
 ## Inspiration
 Our team agreed journaling makes us feel better. From stress relief, to self reflection, to improved ability to communicate and express ourselves - the benefits of journaling are endless. But it can be very hard for busy developers to remember to journal, even if it would greatly benefit their mental health. 
