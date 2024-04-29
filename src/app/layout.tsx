@@ -25,12 +25,12 @@ export default async function RootLayout({
   const session = await getServerSession();
   return (
     <html lang="en" className={`${montserrat.className}`}>
-      <body className="bg-[#121212] text-white min-h-[100vh] flex flex-col">
-        <Particles className="absolute -z-10  h-full w-full" />
+      <body className="bg-[#121212] text-white">
+        <Particles className="absolute -z-10 min-h-screen w-full" />
         <SessionProvider session={session}>
           <div className="flex flex-col">
             <NewNavBar />
-            <main className="flex-grow">{children}</main>
+            <main>{children}</main>
           </div>
         </SessionProvider>
       </body>
