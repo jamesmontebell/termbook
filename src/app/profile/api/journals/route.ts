@@ -8,7 +8,13 @@ export async function GET() {
   }
   try {
     const response = await fetch(
-      "http://18.226.82.203:1234/entries/" + session.user.email
+      "http://18.226.82.203:1234/entries/" + session.user.email,
+      {
+        method: "GET",
+        headers: {
+          Authorization: process.env.API_SECRET ?? "",
+        },
+      }
     );
     return response;
   } catch (error) {
